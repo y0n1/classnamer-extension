@@ -50,7 +50,7 @@ namespace ClassNamerExtension
                         showClassNames(FEATURE2_MESSAGE, 3);
                         break;
                     case ConsoleKey.D3:
-                        showTagCloud(200);
+                        showTagCloud(FEATURE2_REFERENCES_NUMBER);
                         break;
                 }
 
