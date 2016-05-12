@@ -61,7 +61,6 @@ namespace ClassNamerExtension
 
         public void Show()
         {
-            Console.Clear();
             foreach (var entry in _mappings)
             {
                 string word = entry.Key;

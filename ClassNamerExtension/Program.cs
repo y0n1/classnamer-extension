@@ -12,7 +12,7 @@ namespace ClassNamerExtension
 {
     class Program
     {
-
+        private const int SPINNER_VELOCITY = 35;
         private const string FEATURE1_MESSAGE = "Hello dear user - the selected class name is ";
         private const string FEATURE2_MESSAGE = "Hello dear user - we've selected three new class names for you, and those are ";
         private const int FEATURE2_REFERENCES_NUMBER = 200;
@@ -68,11 +68,12 @@ namespace ClassNamerExtension
             for (int i = 0; i < numberOfReferences; i++)
             {
                 tagCloud.Add(ClassNamerFetcher.Fetch());
-                showSpinner(35);
+                showSpinner(SPINNER_VELOCITY);
             }
             Console.CursorVisible = true;
 
             tagCloud.Show();
+            tagCloud.Clear();
         }
 
         private static async void showSpinner(int spinVelocity)
@@ -92,6 +93,7 @@ namespace ClassNamerExtension
         private static void showClassNames(string message, int quantity)
         {
             Console.Clear();
+            showSpinner(SPINNER_VELOCITY);
             string aggregateMessage = message;
             if (quantity == 1)
             {
