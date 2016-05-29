@@ -7,8 +7,8 @@
     <ProjectGuid>{82631F10-D21E-4AF6-83D8-4229048E6C98}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ClassNamerExtension</RootNamespace>
-    <AssemblyName>ClassNamerExtension</AssemblyName>
+    <RootNamespace>App</RootNamespace>
+    <AssemblyName>ClassNamerExtensionApp</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>ClassNamerExtension.Program</StartupObject>
+    <StartupObject>App.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,14 +46,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClassNamerFetcher.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Helpers\Fetcher.cs" />
+    <Compile Include="Features\Feature.cs" />
+    <Compile Include="Utils\ExtensionMethods.cs" />
+    <Compile Include="Interfaces\IFetchable.cs" />
+    <Compile Include="Interfaces\IProcessable.cs" />
+    <Compile Include="Main\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ClassNamerTagCloud.cs" />
+    <Compile Include="Helpers\TagCloud.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
